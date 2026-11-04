@@ -1,0 +1,260 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "id": 1,
+        "name": "Public Website",
+        "type": "web_server",
+        "software": "Apache",
+        "version": "2.4.49",
+        "is_entry_point": true,
+        "is_sensitive": false,
+        "vulnerabilities": [
+          {
+            "cve": "CVE-2021-41773",
+            "cvss": 7.5,
+            "description": "Path traversal flaw that lets an attacker read files outside the web folder."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Employee Laptop",
+        "type": "workstation",
+        "software": "Microsoft Office",
+        "version": "2016",
+        "is_entry_point": true,
+        "is_sensitive": false,
+        "vulnerabilities": [
+          {
+            "cve": "CVE-2017-11882",
+            "cvss": 7.8,
+            "description": "Memory flaw in Office that can run attacker code when a bad document is opened."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "File Server",
+        "type": "file_server",
+        "software": "Samba",
+        "version": "3.5.0",
+        "is_entry_point": false,
+        "is_sensitive": false,
+        "vulnerabilities": [
+          {
+            "cve": "CVE-2017-7494",
+            "cvss": 9.8,
+            "description": "Lets an attacker upload a file and make the server run it."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Customer Database",
+        "type": "database",
+        "software": "MySQL",
+        "version": "5.7.30",
+        "is_entry_point": false,
+        "is_sensitive": true,
+        "vulnerabilities": [
+          {
+            "cve": "CVE-2020-14812",
+            "cvss": 4.9,
+            "description": "A privileged user can make the database server hang or crash."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Admin Workstation",
+        "type": "workstation",
+        "software": "Windows 10",
+        "version": "21H2",
+        "is_entry_point": false,
+        "is_sensitive": false,
+        "vulnerabilities": []
+      },
+      {
+        "id": 6,
+        "name": "Domain Controller",
+        "type": "domain_controller",
+        "software": "Windows Server",
+        "version": "2016",
+        "is_entry_point": false,
+        "is_sensitive": true,
+        "vulnerabilities": [
+          {
+            "cve": "CVE-2020-1472",
+            "cvss": 10.0,
+            "description": "Zerologon: lets an attacker take over the domain controller without a password."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "source": 1, "target": 3, "connection": "network_access", "port": 445 },
+      { "source": 2, "target": 3, "connection": "network_access", "port": 445 },
+      { "source": 3, "target": 4, "connection": "db_access", "port": 3306 },
+      { "source": 3, "target": 5, "connection": "shared_login", "port": 3389 },
+      { "source": 5, "target": 6, "connection": "shared_login", "port": 389 },
+      { "source": 2, "target": 5, "connection": "network_access", "port": 3389 }
+    ]
+  },
+  "paths": [
+    {
+      "nodes": [1, 3, 4],
+      "steps": [
+        {
+          "from": 1,
+          "to": 3,
+          "technique_id": "T1190",
+          "technique_name": "Exploit Public-Facing Application",
+          "via": "CVE-2021-41773"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "technique_id": "T1210",
+          "technique_name": "Exploitation of Remote Services",
+          "via": "CVE-2020-14812"
+        }
+      ]
+    },
+    {
+      "nodes": [1, 3, 5, 6],
+      "steps": [
+        {
+          "from": 1,
+          "to": 3,
+          "technique_id": "T1190",
+          "technique_name": "Exploit Public-Facing Application",
+          "via": "CVE-2021-41773"
+        },
+        {
+          "from": 3,
+          "to": 5,
+          "technique_id": "T1078",
+          "technique_name": "Valid Accounts",
+          "via": null
+        },
+        {
+          "from": 5,
+          "to": 6,
+          "technique_id": "T1078",
+          "technique_name": "Valid Accounts",
+          "via": null
+        }
+      ]
+    },
+    {
+      "nodes": [2, 3, 4],
+      "steps": [
+        {
+          "from": 2,
+          "to": 3,
+          "technique_id": "T1210",
+          "technique_name": "Exploitation of Remote Services",
+          "via": "CVE-2017-7494"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "technique_id": "T1210",
+          "technique_name": "Exploitation of Remote Services",
+          "via": "CVE-2020-14812"
+        }
+      ]
+    },
+    {
+      "nodes": [2, 3, 5, 6],
+      "steps": [
+        {
+          "from": 2,
+          "to": 3,
+          "technique_id": "T1210",
+          "technique_name": "Exploitation of Remote Services",
+          "via": "CVE-2017-7494"
+        },
+        {
+          "from": 3,
+          "to": 5,
+          "technique_id": "T1078",
+          "technique_name": "Valid Accounts",
+          "via": null
+        },
+        {
+          "from": 5,
+          "to": 6,
+          "technique_id": "T1078",
+          "technique_name": "Valid Accounts",
+          "via": null
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "node": 3,
+      "score": 9.8,
+      "level": "critical",
+      "explanation": "The File Server runs an old Samba version with a very serious flaw (CVE-2017-7494). Every attack path goes through this machine, so if it falls, the attacker can reach both the database and the domain controller."
+    },
+    {
+      "node": 6,
+      "score": 9.4,
+      "level": "critical",
+      "explanation": "The Domain Controller controls all logins in the company. It has the Zerologon flaw (CVE-2020-1472), and an attacker can also get here with a stolen shared login from the Admin Workstation."
+    },
+    {
+      "node": 1,
+      "score": 7.5,
+      "level": "high",
+      "explanation": "The Public Website is open to the internet and runs Apache 2.4.49, which has a known file-reading flaw (CVE-2021-41773). It is an easy first step for an attacker."
+    },
+    {
+      "node": 4,
+      "score": 7.2,
+      "level": "high",
+      "explanation": "The Customer Database holds sensitive data. Its own flaw is small (CVE-2020-14812), but the File Server can talk to it directly, so a hacked File Server puts it at risk."
+    },
+    {
+      "node": 5,
+      "score": 5.5,
+      "level": "medium",
+      "explanation": "The Admin Workstation has no known flaws, but it shares logins with the File Server and the Domain Controller. It acts as a bridge the attacker can walk across."
+    },
+    {
+      "node": 2,
+      "score": 4.6,
+      "level": "medium",
+      "explanation": "The Employee Laptop runs Office 2016 with a known flaw (CVE-2017-11882). A bad document could give an attacker a starting point inside the network."
+    }
+  ],
+  "fixes": [
+    {
+      "node": 3,
+      "fix": "Update Samba to a patched version, and block port 445 from the Public Website and from laptops."
+    },
+    {
+      "node": 6,
+      "fix": "Install the August 2020 Windows security updates that fix Zerologon, and limit who can log in to the Domain Controller."
+    },
+    {
+      "node": 1,
+      "fix": "Upgrade Apache to 2.4.51 or newer, and put the website in a separate network zone (DMZ)."
+    },
+    {
+      "node": 4,
+      "fix": "Update MySQL, and allow database connections only from the application servers that need them."
+    },
+    {
+      "node": 5,
+      "fix": "Stop reusing the same login across machines. Give the admin account a unique password and turn on multi-factor login."
+    },
+    {
+      "node": 2,
+      "fix": "Update Microsoft Office, and block documents from unknown senders from opening macros or embedded objects."
+    }
+  ]
+}

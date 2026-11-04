@@ -1,0 +1,7 @@
+id,name,type,software,version,is_entry_point,is_sensitive
+1,Public Website,web_server,Apache,2.4.49,yes,no
+2,Employee Laptop,workstation,Microsoft Office,2016,yes,no
+3,File Server,file_server,Samba,3.5.0,no,no
+4,Customer Database,database,MySQL,5.7.30,no,yes
+5,Admin Workstation,workstation,Windows 10,21H2,no,no
+6,Domain Controller,domain_controller,Windows Server,2016,no,yes

@@ -1,0 +1,75 @@
+{
+  "_note": "Small demo list of well-known CVEs. Descriptions and version ranges are simplified for learning. Check the real details on the NVD website (nvd.nist.gov) before the final project. min_version and max_version are both included in the range. If min_version is missing, the range has no lower limit.",
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2021-41773",
+      "software": "Apache",
+      "min_version": "2.4.49",
+      "max_version": "2.4.49",
+      "cvss": 7.5,
+      "description": "Path traversal flaw that lets an attacker read files outside the web folder."
+    },
+    {
+      "cve": "CVE-2021-40438",
+      "software": "Apache",
+      "max_version": "2.4.48",
+      "cvss": 9.0,
+      "description": "Flaw in the proxy module that lets an attacker make the server send requests to other machines."
+    },
+    {
+      "cve": "CVE-2017-7494",
+      "software": "Samba",
+      "min_version": "3.5.0",
+      "max_version": "4.6.3",
+      "cvss": 9.8,
+      "description": "Lets an attacker upload a file and make the server run it."
+    },
+    {
+      "cve": "CVE-2020-14812",
+      "software": "MySQL",
+      "min_version": "5.7.0",
+      "max_version": "5.7.30",
+      "cvss": 4.9,
+      "description": "A privileged user can make the database server hang or crash."
+    },
+    {
+      "cve": "CVE-2017-11882",
+      "software": "Microsoft Office",
+      "min_version": "2007",
+      "max_version": "2016",
+      "cvss": 7.8,
+      "description": "Memory flaw in Office that can run attacker code when a bad document is opened."
+    },
+    {
+      "cve": "CVE-2020-1472",
+      "software": "Windows Server",
+      "min_version": "2008",
+      "max_version": "2019",
+      "cvss": 10.0,
+      "description": "Zerologon: lets an attacker take over the domain controller without a password."
+    },
+    {
+      "cve": "CVE-2020-0796",
+      "software": "Windows 10",
+      "min_version": "1903",
+      "max_version": "1909",
+      "cvss": 10.0,
+      "description": "Flaw in file sharing (SMB) compression that lets an attacker run code remotely."
+    },
+    {
+      "cve": "CVE-2021-44228",
+      "software": "Apache Log4j",
+      "min_version": "2.0",
+      "max_version": "2.14.1",
+      "cvss": 10.0,
+      "description": "Log4Shell: a logged text message can make the application download and run attacker code."
+    },
+    {
+      "cve": "CVE-2018-15473",
+      "software": "OpenSSH",
+      "max_version": "7.7",
+      "cvss": 5.3,
+      "description": "Lets an attacker find out which user names exist on the server."
+    }
+  ]
+}

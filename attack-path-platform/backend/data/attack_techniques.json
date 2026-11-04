@@ -1,0 +1,17 @@
+{
+  "_note": "The 3 MITRE ATT&CK techniques the attacker can use. Ids and names come from attack.mitre.org. The plain-English descriptions are written for beginners and are used by explain.py later.",
+  "techniques": {
+    "T1078": {
+      "name": "Valid Accounts",
+      "description": "The attacker logs in with a real account or password that already works on the next machine."
+    },
+    "T1190": {
+      "name": "Exploit Public-Facing Application",
+      "description": "The attacker breaks into a program that is open to the internet, such as a public website."
+    },
+    "T1210": {
+      "name": "Exploitation of Remote Services",
+      "description": "The attacker uses a known flaw in a service on another machine to get into it over the network."
+    }
+  }
+}
