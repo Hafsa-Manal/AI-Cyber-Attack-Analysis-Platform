@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- EXAMPLE FILE. Written by hand for testing, not a real scan result.
+     The addresses are from a private lab range (192.168.56.0/24).
+     It has the same shape as the file made by:  nmap -sV -v -oX scan.xml 192.168.56.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sV -v -oX scan.xml 192.168.56.0/24" start="1794132000" startstr="Sun Nov  8 10:00:00 2026" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1-1000"/>
+<verbose level="1"/>
+<debugging level="0"/>
+
+<host starttime="1794132001" endtime="1794132009"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.56.10" addrtype="ipv4"/>
+<address addr="08:00:27:AA:00:10" addrtype="mac" vendor="PCS Systems"/>
+<hostnames><hostname name="web01" type="PTR"/></hostnames>
+<ports><extraports state="closed" count="997"><extrareasons reason="resets" count="997"/></extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.49" extrainfo="(Unix)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.49</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.49" extrainfo="(Unix)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.49</cpe></service></port>
+</ports>
+<times srtt="400" rttvar="150" to="100000"/>
+</host>
+
+<host starttime="1794132009" endtime="1794132016"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.56.11" addrtype="ipv4"/>
+<address addr="08:00:27:AA:00:11" addrtype="mac" vendor="PCS Systems"/>
+<hostnames><hostname name="app01" type="PTR"/></hostnames>
+<ports><extraports state="closed" count="998"><extrareasons reason="resets" count="998"/></extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.48" extrainfo="(Unix)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.48</cpe></service></port>
+</ports>
+<times srtt="380" rttvar="120" to="100000"/>
+</host>
+
+<host starttime="1794132016" endtime="1794132024"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.56.12" addrtype="ipv4"/>
+<address addr="08:00:27:AA:00:12" addrtype="mac" vendor="PCS Systems"/>
+<hostnames><hostname name="files01" type="PTR"/></hostnames>
+<ports><extraports state="closed" count="998"><extrareasons reason="resets" count="998"/></extraports>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<times srtt="410" rttvar="160" to="100000"/>
+</host>
+
+<host starttime="1794132024" endtime="1794132031"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.56.13" addrtype="ipv4"/>
+<address addr="08:00:27:AA:00:13" addrtype="mac" vendor="PCS Systems"/>
+<hostnames><hostname name="db01" type="PTR"/></hostnames>
+<ports><extraports state="closed" count="998"><extrareasons reason="resets" count="998"/></extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="5.7.30" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.7.30</cpe></service></port>
+</ports>
+<times srtt="390" rttvar="140" to="100000"/>
+</host>
+
+<host starttime="1794132031" endtime="1794132036"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.56.20" addrtype="ipv4"/>
+<address addr="08:00:27:AA:00:20" addrtype="mac" vendor="PCS Systems"/>
+<hostnames><hostname name="printer01" type="PTR"/></hostnames>
+<ports><extraports state="closed" count="999"><extrareasons reason="resets" count="999"/></extraports>
+<port protocol="tcp" portid="631"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ipp" product="CUPS" version="2.3" method="probed" conf="10"><cpe>cpe:/a:apple:cups:2.3</cpe></service></port>
+</ports>
+<times srtt="420" rttvar="170" to="100000"/>
+</host>
+
+<host><status state="down" reason="no-response" reason_ttl="0"/>
+<address addr="192.168.56.99" addrtype="ipv4"/>
+</host>
+
+<runstats><finished time="1794132038" timestr="Sun Nov  8 10:00:38 2026" summary="Nmap done at Sun Nov  8 10:00:38 2026; 256 IP addresses (5 hosts up) scanned in 38.00 seconds" elapsed="38.00" exit="success"/>
+<hosts up="5" down="251" total="256"/>
+</runstats>
+</nmaprun>

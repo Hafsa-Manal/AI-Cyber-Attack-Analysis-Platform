@@ -4,26 +4,42 @@ import mockResult from "./mockResult.json";
 
 // true  = use the fake data in mockResult.json (no backend needed)
 // false = call the real FastAPI backend
-const USE_MOCK = true;
+const USE_MOCK = false;
 
 // Where the backend runs (used only when USE_MOCK is false)
 const API_URL = "http://localhost:8000";
 
+// live = true also asks the backend to look up CVEs on NVD (slower, needs internet)
+function liveQuery(live) {
+  return live ? "?live=true" : "";
+}
+
 // Get the result for the built-in sample network
-export async function getSampleResult() {
-  if (USE_MOCK) return mockResult;
-  return request(`${API_URL}/api/sample`);
+export async function getSampleResult(live = false) {
+  if (USE_MOCK) return mockResult; // demo mode ignores "live"
+  return request(`${API_URL}/api/sample${liveQuery(live)}`);
 }
 
 // Send nodes.csv and edges.csv and get the analysis result back
-export async function analyzeFiles(nodesFile, edgesFile) {
+export async function analyzeFiles(nodesFile, edgesFile, live = false) {
   // Demo mode: whatever you upload, we return the same sample result
   if (USE_MOCK) return mockResult;
 
   const form = new FormData();
   form.append("nodes", nodesFile); // field names must match the backend
   form.append("edges", edgesFile);
-  return request(`${API_URL}/api/analyze`, { method: "POST", body: form });
+  return request(`${API_URL}/api/analyze${liveQuery(live)}`, { method: "POST", body: form });
+}
+
+// Send an Nmap scan file (scan.xml). The backend returns a DRAFT:
+// { nodes_csv: "...", edges_csv: "...", guesses: ["...", ...] }
+export async function importNmap(scanFile) {
+  if (USE_MOCK) {
+    throw new Error("Nmap import needs the real backend. Set USE_MOCK = false in api.js and start the backend.");
+  }
+  const form = new FormData();
+  form.append("scan", scanFile); // field name must match the backend
+  return request(`${API_URL}/api/import-nmap`, { method: "POST", body: form });
 }
 
 // Helper: call the backend and turn problems into clear error messages

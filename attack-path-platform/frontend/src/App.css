@@ -87,6 +87,35 @@ input:focus-visible {
   color: #7a1914;
 }
 
+/* ---------- Helper prompt box ---------- */
+.helper-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.25rem;
+  margin-top: 2.5rem;
+}
+.helper-box h2 { margin-top: 0; }
+.helper-box ol { padding-left: 1.25rem; }
+.helper-box li { list-style: decimal; margin-bottom: 0.3rem; }
+.helper-box button {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  padding: 0.55rem 1rem;
+}
+.copy-status { margin-left: 0.75rem; font-size: 0.9rem; color: var(--muted); }
+.helper-box details { margin-top: 1rem; }
+.helper-box summary { cursor: pointer; }
+.helper-prompt {
+  white-space: pre-wrap;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0.9rem;
+  font-size: 0.82rem;
+  max-height: 20rem;
+  overflow: auto;
+}
+
 /* ---------- Results screen ---------- */
 .app-header {
   display: flex;

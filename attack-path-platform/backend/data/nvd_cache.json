@@ -1,0 +1,387 @@
+{
+  "cpe:2.3:a:apache:http_server:2.4.49:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-08T18:12:50.227735+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2021-41773",
+        "cvss": 9.8,
+        "description": "A flaw was found in a change made to path normalization in Apache HTTP Server 2.4.49."
+      },
+      {
+        "cve": "CVE-2021-42013",
+        "cvss": 9.8,
+        "description": "It was found that the fix for CVE-2021-41773 in Apache HTTP Server 2.4.50 was insufficient."
+      },
+      {
+        "cve": "CVE-2021-44790",
+        "cvss": 9.8,
+        "description": "A carefully crafted request body can cause a buffer overflow in the mod_lua multipart parser (r:parsebody() called from Lua scripts)."
+      },
+      {
+        "cve": "CVE-2022-22720",
+        "cvss": 9.8,
+        "description": "Apache HTTP Server 2.4.52 and earlier fails to close inbound connection when errors are encountered discarding the request body, exposing the server to HTTP Request Smuggling"
+      },
+      {
+        "cve": "CVE-2022-23943",
+        "cvss": 9.8,
+        "description": "Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server allows an attacker to overwrite heap memory with possibly attacker provided data."
+      },
+      {
+        "cve": "CVE-2022-31813",
+        "cvss": 9.8,
+        "description": "Apache HTTP Server 2.4.53 and earlier may not send the X-Forwarded-* headers to the origin server based on client side Connection header hop-by-hop mechanism."
+      },
+      {
+        "cve": "CVE-2023-25690",
+        "cvss": 9.8,
+        "description": "Some mod_proxy configurations on Apache HTTP Server versions 2.4.0 through 2.4.55 allow a HTTP Request Smuggling attack."
+      },
+      {
+        "cve": "CVE-2024-38474",
+        "cvss": 9.8,
+        "description": "Substitution encoding issue in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows attacker to execute scripts in directories permitted by the configuration but not directly reachable by an..."
+      },
+      {
+        "cve": "CVE-2024-38476",
+        "cvss": 9.8,
+        "description": "Vulnerability in core of Apache HTTP Server 2.4.59 and earlier are vulnerably to information disclosure, SSRF or local script execution via backend applications whose response headers are malicious..."
+      },
+      {
+        "cve": "CVE-2026-28780",
+        "cvss": 9.8,
+        "description": "Heap-based Buffer Overflow vulnerability in mod_proxy_ajp of Apache HTTP Server."
+      }
+    ]
+  },
+  "cpe:2.3:a:microsoft:office:2016:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-08T18:13:42.226104+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2007-0065",
+        "cvss": 10.0,
+        "description": "Heap-based buffer overflow in Object Linking and Embedding (OLE) Automation in Microsoft Windows 2000 SP4, XP SP2, Server 2003 SP1 and SP2, Vista, Office 2004 for Mac, and Visual basic 6.0 SP6 allo..."
+      },
+      {
+        "cve": "CVE-2019-1205",
+        "cvss": 9.8,
+        "description": "A remote code execution vulnerability exists in Microsoft Word software when it fails to properly handle objects in memory."
+      },
+      {
+        "cve": "CVE-2020-0901",
+        "cvss": 9.8,
+        "description": "A remote code execution vulnerability exists in Microsoft Excel software when the software fails to properly handle objects in memory."
+      },
+      {
+        "cve": "CVE-2016-7277",
+        "cvss": 9.6,
+        "description": "Microsoft Office 2016 allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted document, aka \"Microsoft Office Memory Corruption Vulnerability.\""
+      },
+      {
+        "cve": "CVE-2006-1540",
+        "cvss": 9.3,
+        "description": "MSO.DLL in Microsoft Office 2000, Office XP (2002), and Office 2003 allows user-assisted attackers to cause a denial of service and execute arbitrary code via multiple attack vectors, as originally..."
+      },
+      {
+        "cve": "CVE-2006-4694",
+        "cvss": 9.3,
+        "description": "Unspecified vulnerability in PowerPoint in Microsoft Office 2000, Office XP and Office 2003 allows user-assisted attackers to execute arbitrary code via a crafted record in a PPT file, as exploited..."
+      },
+      {
+        "cve": "CVE-2006-1311",
+        "cvss": 9.3,
+        "description": "The RichEdit component in Microsoft Windows 2000 SP4, XP SP2, and 2003 SP1; Office 2000 SP3, XP SP3, 2003 SP2, and Office 2004 for Mac; and Learning Essentials for Microsoft Office 1.0, 1.1, and 1...."
+      },
+      {
+        "cve": "CVE-2015-2468",
+        "cvss": 9.3,
+        "description": "Microsoft Word 2007 SP3, Office 2010 SP2, Word 2010 SP2, Word 2013 SP1, Word 2013 RT SP1, Office for Mac 2011, Office for Mac 2016, Office Compatibility Pack SP3, Word Viewer, Word Automation Servi..."
+      },
+      {
+        "cve": "CVE-2015-2477",
+        "cvss": 9.3,
+        "description": "Microsoft Office 2007 SP3, Office for Mac 2011, Office for Mac 2016, and Word Viewer allow remote attackers to execute arbitrary code via a crafted document, aka \"Microsoft Office Memory Corruption..."
+      },
+      {
+        "cve": "CVE-2015-6093",
+        "cvss": 9.3,
+        "description": "Microsoft Office 2007 SP3, Office 2010 SP2, Office 2013 SP1, Office 2013 RT SP1, Office 2016, Word Automation Services on SharePoint Server 2010 SP2 and 2013 SP1, Office Web Apps 2010 SP2, and Offi..."
+      }
+    ]
+  },
+  "cpe:2.3:a:samba:samba:3.5.0:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-08T18:13:48.144955+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2012-1182",
+        "cvss": 10.0,
+        "description": "The RPC code generator in Samba 3.x before 3.4.16, 3.5.x before 3.5.14, and 3.6.x before 3.6.4 does not implement validation of an array length in a manner consistent with validation of array memor..."
+      },
+      {
+        "cve": "CVE-2015-0240",
+        "cvss": 10.0,
+        "description": "The Netlogon server implementation in smbd in Samba 3.5.x and 3.6.x before 3.6.25, 4.0.x before 4.0.25, 4.1.x before 4.1.17, and 4.2.x before 4.2.0rc5 performs a free operation on an uninitialized..."
+      },
+      {
+        "cve": "CVE-2017-7494",
+        "cvss": 9.8,
+        "description": "Samba since version 3.5.0 and before 4.6.4, 4.5.10 and 4.4.14 is vulnerable to remote code execution vulnerability, allowing a malicious client to upload a shared library to a writable share, and t..."
+      },
+      {
+        "cve": "CVE-2022-45141",
+        "cvss": 9.8,
+        "description": "Since the Windows Kerberos RC4-HMAC Elevation of Privilege Vulnerability was disclosed by Microsoft on Nov 8 2022 and per RFC8429 it is assumed that rc4-hmac is weak, Vulnerable Samba Active Direct..."
+      },
+      {
+        "cve": "CVE-2023-3961",
+        "cvss": 9.8,
+        "description": "A path traversal vulnerability was identified in Samba when processing client pipe names connecting to Unix domain sockets within a private directory."
+      },
+      {
+        "cve": "CVE-2011-2411",
+        "cvss": 9.0,
+        "description": "Unspecified vulnerability on HP NonStop Servers with software H06.x through H06.23.00 and J06.x through J06.12.00, when Samba is used, allows remote authenticated users to execute arbitrary code vi..."
+      },
+      {
+        "cve": "CVE-2018-10858",
+        "cvss": 8.8,
+        "description": "A heap-buffer overflow was found in the way samba clients processed extra long filename in a directory listing."
+      },
+      {
+        "cve": "CVE-2021-44142",
+        "cvss": 8.8,
+        "description": "The Samba vfs_fruit module uses extended file attributes (EA, xattr) to provide \"...enhanced compatibility with Apple SMB clients and interoperability with a Netatalk 3 AFP fileserver.\" Samba versi..."
+      },
+      {
+        "cve": "CVE-2022-2031",
+        "cvss": 8.8,
+        "description": "A flaw was found in Samba."
+      },
+      {
+        "cve": "CVE-2022-42898",
+        "cvss": 8.8,
+        "description": "PAC parsing in MIT Kerberos 5 (aka krb5) before 1.19.4 and 1.20.x before 1.20.1 has integer overflows that may lead to remote code execution (in KDC, kadmind, or a GSS or Kerberos application serve..."
+      }
+    ]
+  },
+  "cpe:2.3:a:oracle:mysql:5.7.30:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-08T18:14:31.963264+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2019-14540",
+        "cvss": 9.8,
+        "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind before 2.9.10."
+      },
+      {
+        "cve": "CVE-2020-1967",
+        "cvss": 7.5,
+        "description": "Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"sign..."
+      },
+      {
+        "cve": "CVE-2023-21980",
+        "cvss": 7.1,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Client programs)."
+      },
+      {
+        "cve": "CVE-2020-14539",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+      },
+      {
+        "cve": "CVE-2020-14576",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: UDF)."
+      },
+      {
+        "cve": "CVE-2020-14765",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: FTS)."
+      },
+      {
+        "cve": "CVE-2020-14769",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+      },
+      {
+        "cve": "CVE-2020-14775",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB)."
+      },
+      {
+        "cve": "CVE-2020-14827",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Security: LDAP Auth)."
+      },
+      {
+        "cve": "CVE-2020-14830",
+        "cvss": 6.5,
+        "description": "Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Optimizer)."
+      }
+    ]
+  },
+  "cpe:2.3:a:apache:http_server:2.4.48:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-08T18:17:53.580837+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2021-39275",
+        "cvss": 9.8,
+        "description": "ap_escape_quotes() may write beyond the end of a buffer when given malicious input."
+      },
+      {
+        "cve": "CVE-2021-44790",
+        "cvss": 9.8,
+        "description": "A carefully crafted request body can cause a buffer overflow in the mod_lua multipart parser (r:parsebody() called from Lua scripts)."
+      },
+      {
+        "cve": "CVE-2022-22720",
+        "cvss": 9.8,
+        "description": "Apache HTTP Server 2.4.52 and earlier fails to close inbound connection when errors are encountered discarding the request body, exposing the server to HTTP Request Smuggling"
+      },
+      {
+        "cve": "CVE-2022-23943",
+        "cvss": 9.8,
+        "description": "Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server allows an attacker to overwrite heap memory with possibly attacker provided data."
+      },
+      {
+        "cve": "CVE-2022-31813",
+        "cvss": 9.8,
+        "description": "Apache HTTP Server 2.4.53 and earlier may not send the X-Forwarded-* headers to the origin server based on client side Connection header hop-by-hop mechanism."
+      },
+      {
+        "cve": "CVE-2023-25690",
+        "cvss": 9.8,
+        "description": "Some mod_proxy configurations on Apache HTTP Server versions 2.4.0 through 2.4.55 allow a HTTP Request Smuggling attack."
+      },
+      {
+        "cve": "CVE-2024-38474",
+        "cvss": 9.8,
+        "description": "Substitution encoding issue in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows attacker to execute scripts in directories permitted by the configuration but not directly reachable by an..."
+      },
+      {
+        "cve": "CVE-2024-38476",
+        "cvss": 9.8,
+        "description": "Vulnerability in core of Apache HTTP Server 2.4.59 and earlier are vulnerably to information disclosure, SSRF or local script execution via backend applications whose response headers are malicious..."
+      },
+      {
+        "cve": "CVE-2026-28780",
+        "cvss": 9.8,
+        "description": "Heap-based Buffer Overflow vulnerability in mod_proxy_ajp of Apache HTTP Server."
+      },
+      {
+        "cve": "CVE-2026-29167",
+        "cvss": 9.8,
+        "description": "Use After Free vulnerability in Apache HTTP Server with mod_ldap in per-directory configuration This issue affects Apache HTTP Server: from 2.4.0 through 2.4.67."
+      }
+    ]
+  },
+  "cpe:2.3:a:apache:log4j:2.14.1:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-09T16:38:38.329951+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2021-44228",
+        "cvss": 10.0,
+        "description": "Apache Log4j2 2.0-beta9 through 2.15.0 (excluding security releases 2.12.2, 2.12.3, and 2.3.1) JNDI features used in configuration, log messages, and parameters do not protect against attacker cont..."
+      },
+      {
+        "cve": "CVE-2021-45046",
+        "cvss": 9.0,
+        "description": "It was found that the fix to address CVE-2021-44228 in Apache Log4j 2.15.0 was incomplete in certain non-default configurations."
+      },
+      {
+        "cve": "CVE-2026-34479",
+        "cvss": 7.5,
+        "description": "The Log4j1XmlLayout from the Apache Log4j 1-to-Log4j 2 bridge fails to escape characters forbidden by the XML 1.0 standard, producing malformed XML output."
+      },
+      {
+        "cve": "CVE-2026-34480",
+        "cvss": 7.5,
+        "description": "Apache Log4j Core's XmlLayout https://logging.apache.org/log4j/2.x/manual/layouts.html#XmlLayout , in versions up to and including 2.25.3, fails to sanitize characters forbidden by the XML 1.0 spec..."
+      },
+      {
+        "cve": "CVE-2026-34481",
+        "cvss": 7.5,
+        "description": "Apache Log4j's JsonTemplateLayout https://logging.apache.org/log4j/2.x/manual/json-template-layout.html , in versions up to and including 2.25.3, produces invalid JSON output when log events contai..."
+      },
+      {
+        "cve": "CVE-2021-44832",
+        "cvss": 6.6,
+        "description": "Apache Log4j2 versions 2.0-beta7 through 2.17.0 (excluding security fix releases 2.3.2 and 2.12.4) are vulnerable to a remote code execution (RCE) attack when a configuration uses a JDBC Appender w..."
+      },
+      {
+        "cve": "CVE-2021-45105",
+        "cvss": 5.9,
+        "description": "Apache Log4j2 versions 2.0-alpha1 through 2.16.0 (excluding 2.12.3 and 2.3.1) did not protect from uncontrolled recursion from self-referential lookups."
+      },
+      {
+        "cve": "CVE-2026-34477",
+        "cvss": 5.9,
+        "description": "The fix for CVE-2025-68161 https://logging.apache.org/security.html#CVE-2025-68161 was incomplete: it addressed hostname verification only when enabled via the log4j2.sslVerifyHostName https://logg..."
+      },
+      {
+        "cve": "CVE-2026-49844",
+        "cvss": 5.9,
+        "description": "Improper encoding of non-finite floating-point values during MapMessage JSON serialization in Apache Log4j API produces output that is not valid JSON."
+      },
+      {
+        "cve": "CVE-2025-68161",
+        "cvss": 4.8,
+        "description": "The Socket Appender in Apache Log4j Core versions 2.0-beta9 through 2.25.2 does not perform TLS hostname verification of the peer certificate, even when the verifyHostName https://logging.apache.or..."
+      }
+    ]
+  },
+  "cpe:2.3:a:openbsd:openssh:7.4:*:*:*:*:*:*:*": {
+    "fetched_at": "2026-11-09T16:38:44.581633+00:00",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2023-38408",
+        "cvss": 9.8,
+        "description": "The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system."
+      },
+      {
+        "cve": "CVE-2026-60002",
+        "cvss": 9.4,
+        "description": "ssh in OpenSSH before 10.4 can have a use-after-free when a server changes its host key during a key re-exchange."
+      },
+      {
+        "cve": "CVE-2008-3844",
+        "cvss": 9.3,
+        "description": "Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that..."
+      },
+      {
+        "cve": "CVE-2026-35385",
+        "cvss": 8.1,
+        "description": "In OpenSSH before 10.3, a file downloaded by scp may be installed setuid or setgid, an outcome contrary to some users' expectations, if the download is performed as root with -O (legacy scp protoco..."
+      },
+      {
+        "cve": "CVE-2026-35414",
+        "cvss": 8.1,
+        "description": "OpenSSH before 10.3 mishandles the authorized_keys principals option in uncommon scenarios involving a principals list in conjunction with a Certificate Authority that makes certain use of comma ch..."
+      },
+      {
+        "cve": "CVE-2026-106583",
+        "cvss": 7.8,
+        "description": "In ssh in OpenSSH before 10.6, a $ or \\ character can occur in a command-line username, leading to injection."
+      },
+      {
+        "cve": "CVE-2026-59999",
+        "cvss": 7.5,
+        "description": "In sshd in OpenSSH before 10.4, DisableForwarding=yes was supposed to take precedence over PermitTunnel=yes, but did not."
+      },
+      {
+        "cve": "CVE-2026-60000",
+        "cvss": 7.5,
+        "description": "sshd in OpenSSH before 10.4 allows remote attackers to cause a denial of service (resource consumption from excessive authentication attempts) because MaxAuthTries was mishandled for GSSAPIAuthenti..."
+      },
+      {
+        "cve": "CVE-2026-106553",
+        "cvss": 7.5,
+        "description": "In sshd in OpenSSH before 10.6, credentials can incorrectly persist after failure of a GSSAPIAuthentication authentication attempt."
+      },
+      {
+        "cve": "CVE-2026-106555",
+        "cvss": 7.5,
+        "description": "In sshd in OpenSSH before 10.6, GSSAPIAuthentication authentication state can incorrectly be persisted across authentication attempts."
+      }
+    ]
+  }
+}

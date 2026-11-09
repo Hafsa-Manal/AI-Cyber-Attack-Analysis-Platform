@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+networkx
+pytest
+httpx
+defusedxml
+pyyaml
